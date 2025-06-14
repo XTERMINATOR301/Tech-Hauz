@@ -1,5 +1,14 @@
 body
     {
-        style="background-color:powerblue
-        ;"
+        background-color:powderblue;
+    }
+    h1{
+         color:white;
+    }
+    p{
+        color:white;
+        font-family:arialblack,impact,centurygothic
+        font-style:italics
+        font-weight:bold
+        text decoration:beautiful
     }
