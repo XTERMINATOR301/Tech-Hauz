@@ -2,18 +2,23 @@ body
     {
         background-color:powderblue;
         background-image:url("computerschool.jpg");
+        background: linear-gradient(to right,skyblue,white);
+        background-repeat:no-repeat;
+        background-attachment:fixed;
+        backgroung-size:cover;
     }
     h1{
          color:white;
     }
+        font-style:italic;
+        font-weight:bold;
+        text-decoration:underline;
+    }  
     p{
         color:white;
-        font-style:italics;
+        font-style:italic;
         font-weight:bold;
-        text-decoration:beautiful;
+        text-decoration:beatiful;
     }
-    a{
-        background: linear-gradient(to right,skyblue,white);
-        background-repeat:no-repeat;
-        background-attachment:fixed;
-    }
+    
+    

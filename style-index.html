@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edusol login</title>
+    <link rel="stylesheet" href="foldersCSS/style.css">
+    <style>
+        body {
+            background: linear-gradient(to top, green, black);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            }
+        #box1 {
+            margin: 30px auto 10px auto;
+            width: 100px;
+            height: 100px;
+            background: white;
+            border-radius: 50%;
+        }
+        h1 {
+            color: white;
+            margin-bottom: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            background: rgba(0,0,0,0.5);
+            padding: 30px 40px;
+            border-radius: 10px;
+            width: 300px;
+            margin: 0 auto;
+        }
+        label {
+            background-color: black;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin-bottom: 5px;
+        }
+        input[type="text"] {
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 8px;
+            width: 200px;
+            text-align: left;
+        }
+        button[type="submit"] {
+            background-color: green;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            }
+        button[type="submit"]:hover {
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <div id="box1"></div>
+    <h1>Welcome to Edusol</h1>
+    <form action="/login" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="phone-number">Phone number:</label>
+        <input type="text" id="phone-number" name="phone-number" required>
+        <button type="submit">Login</button>
+    </form>
+</body>
+</html>
+            
