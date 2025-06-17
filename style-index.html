@@ -3,86 +3,179 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edusol login</title>
+    <title>Educesol Login</title>
     <link rel="stylesheet" href="foldersCSS/style.css">
     <style>
         body {
-               
-            background: linear-gradient(to top, green, black);
-            background-repeat: no-repeat;
-            background-attachment: fixed;
+            min-height: 100vh;
             margin: 0;
             padding: 0;
-            min-height: 100vh;
-            text-align: center;
-            font-family: Arial, sans-serif;
-            }
-        #box1 {
-            margin: 30px auto 10px auto;
-            width: 100px;
-            height: 100px;
-            background: white;
-            border-radius: 50%;
-        }
-        h1 {
-            color: white;
-            margin-bottom: 20px;
-        }
-        form {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #1a2341 0%, #4caf50 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+}
+        .login-container {
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+            width: 400px;
+            max-width: 90vw;
+            padding: 40px 32px 32px 32px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 15px;
-            background: rgba(0,0,0,0.5);
-            padding: 30px 40px;
-            border-radius: 10px;
-            width: 300px;
-            margin: 0 auto;
         }
-        label {
-            background-color: black;
-            color: white;
-            padding: 5px 10px;
-            border-radius: 5px;
-            margin-bottom: 5px;
+        .login-logo img {
+            width: 80px;
+            margin-bottom: 10px;
         }
-        input[type="text"] {
-            background-color: white;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            padding: 8px;
-            width: 200px;
-            text-align: left;
+        .login-logo .brand {
+            font-weight: bold;
+            color: #1a2341;
+            font-size: 18px;
+            margin-bottom: 20px;
         }
-        button[type="submit"] {
-            background-color: green;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            padding: 10px 20px;
-            cursor: pointer;
-            font-size: 16px;
+        .login-title {
+            color: #4caf50;
+            font-size: 2.2rem;
+            font-weight: bold;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+        .login-subtitle {
+            color: #222;
+            font-size: 1.1rem;
+            margin-bottom: 28px;
+            text-align: center;
+        }
+        .login-form {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .input-label {
+            color: #222;
+            font-size: 0.95rem;
+            margin-bottom: 2px;
+            text-align: center;
             }
-        button[type="submit"]:hover {
-            background-color: darkgreen;s
+        .input-field {
+            display: flex;
+            align-items: center;
+            border: 2px solid #4caf50;
+            border-radius: 10px;
+            padding: 10px 14px;
+            background: #fff;
+            font-size: 1.1rem;
+        }
+        .input-field input {
+            border: none;
+            outline: none;
+            font-size: 1.1rem;
+            flex: 1;
+            background: transparent;
+        }
+        .input-icon {
+            color: #bdbdbd;
+            margin-right: 8px;
+            font-size: 1.3rem;
+        }
+        .password-group {
+            position: relative;
+        }
+        .show-password {
+            position: absolute;
+            right: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #4caf50;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 1rem;
+            user-select: none;
+        }
+        .login-btn {
+            width: 100%;
+            background: #0a0d2c;
+            color: #fff;
+             border: none;
+            border-radius: 6px;
+            padding: 14px 0;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background 0.2s;
+        }
+        .login-btn:hover {
+            background: #1a2341;
+        }
+        .forgot-password {
+            margin-top: 16px;
+            color: #222;
+            font-size: 0.98rem;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+        }
+        @media (max-width: 500px) {
+            .login-container {
+                padding: 24px 8px;
+            }
+             }
     </style>
 </head>
 <body>
-     <div class="center-top-img">
-        <img 
-            src="https://discord.com/channels/@me/1380189201819111488/1384561984405770241" 
-            alt="Discord Image"
-        />
+    <div class="login-container">
+        <div class="login-logo">
+            <img src="https://discord.com/channels/@me/1380189201819111488/1384561984405770241"
+             alt="Educesol Logo" alt="Discord Image"
+             style="width: 200px; max-width: 100%; height: auto;"
+           />
+             
+        </div>
+        <div class="login-title">Login</div>
+        <div class="login-subtitle">To stay connected with us</div>
+        <form class="login-form" action="/login" method="POST">
+            <div class="input-group">
+                <div class="input-label">Phone number / Username</div>
+                <div class="input-field">
+                    <span class="input-icon"><svg width="32" height="32" viewBox="0 0 32 32" fill="highlighted white" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="16" cy="12" r="6" />
+                     <ellipse cx="16" cy="24" rx="10" ry="6" />
+                   </svg></span>
+                    <input type="text" name="username" placeholder="Phone number / Username" required>
+                </div>
+            </div>
+            <div class="input-group password-group">
+                <input class="input-field" type="password" name="password" placeholder="Password" id="password" required style="padding-right:60px;">
+                <span class="show-password" onclick="togglePassword()">Show</span>
+            </div>
+            <button class="login-btn" type="submit">LOGIN</button>
+        </form>
+         <a href="#" class="forgot-password">Forgot password ?</a>
     </div>
-    <div id="box1"></div>
-    <h1>Welcome to Edusol</h1>
-    <form action="/login" method="POST">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
-        <label for="phone-number">Phone number:</label>
-        <input type="text" id="phone-number" name="phone-number" required>
-        <button type="submit">Login</button>
-    </form>
+    <script>
+        function togglePassword() {
+            const pwd = document.getElementById('password');
+            const show = document.querySelector('.show-password');
+            if (pwd.type === 'password') {
+                pwd.type = 'text';
+                show.textContent = 'Hide';
+            } else {
+                pwd.type = 'password';
+                show.textContent = 'Show';
+            }
+        }
+         </script>
 </body>
 </html>
             
